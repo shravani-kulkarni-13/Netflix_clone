@@ -10,8 +10,106 @@
     <link rel="icon" type="image/png" sizes="16x16" href="fevicon netflix/favicon-16x16.png">
     <link rel="manifest" href="fevicon netflix/site.webmanifest">
 
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        body{
+            background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(netflix_background.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        #sign{
+            color: #fff;
+            text-align: center;
+            margin-right: 15px;
+        }
+        #sign:hover{
+            color: #E50914;
+            cursor: pointer;
+        }
+        .card{
+            margin-left: 36%;
+            margin-top: 90px;
+            position: relative;
+            height:50%;
+            width: 340px;
+            background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8));
+            padding: 40px;
+            padding-left: 60px;
+            color: gray;
+        }
+        .card #input1,#input2{
+            width: 300px;
+            height: 35px;
+            margin-top: 30px;
+            background: none;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid lightgrey;
+            color: #fff;
+        }
+        .btn{
+            margin-top: 40px;
+            width: 323px;
+            height: 35px;
+            background-color: #E50914;
+            border: none;
+            outline: none;
+            border-radius: 2px;
+        }
+        .btn a{
+            text-decoration: none;
+            color: #fff;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        #check{
+            margin-top: 20px;
+            accent-color: lightgray;
+            border: none;
+            outline: none;
+        }
+        #pass{
+            margin-top: 20px;
+        }
+        #pass a{
+            text-decoration: none;
+            color: gray;
+        }
+        #pass a:hover{
+            color: #fff;
+        }
+        #up{
+            margin-top: 30px;
+        }
+        #up a{
+            text-decoration: none;
+            color: lightgray;
+        }
+        #up a:hover{
+            color: #E50914;
+        }
+    </style>
+
 </head>
 <body>
-    
+        <div class="card">
+                <h1 id="sign">Sign In</h1>
+
+                <input id="input1" type="email" placeholder="Email pr phone number" required><br>
+                <input id="input2" type="password" placeholder="Password" required><br>
+                
+                <input id="check" type="checkbox"> Remember me
+                
+                <button class="btn"><a href="#">Sign In</a></button><br>
+
+                <p id="pass"><a href="#">Forgot password?</a></p>
+
+                <p id="up">Don't have account? <a href="sign_up.html">Sign Up now</a></p>
+        </div>
 </body>
 </html>
