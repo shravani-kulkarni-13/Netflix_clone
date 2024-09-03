@@ -23,17 +23,13 @@
             background-attachment: fixed;
         }
         #sign{
-            color: #fff;
             text-align: center;
             margin-right: 15px;
-        }
-        #sign:hover{
-            color: #E50914;
-            cursor: pointer;
+            color: #fff;
         }
         .card{
             margin-left: 36%;
-            margin-top: 90px;
+            margin-top: 40px;
             position: relative;
             height:50%;
             width: 340px;
@@ -97,9 +93,16 @@
             text-decoration: none;
             color: lightgray;
         }
-        #up a:hover{
+        #up a:hover,#captcha a:hover{
             color: #E50914;
             border-bottom: 1px solid #E50914;
+        }
+        #captcha{
+            margin-top: 35px;
+        }
+        #captcha a{
+            text-decoration: none;
+            color: lightgray;
         }
     </style>
 
@@ -107,17 +110,20 @@
 <body>
         <div class="card">
                 <h1 id="sign">Sign In</h1>
-
-                <input id="input1" type="email" placeholder="Email pr phone number" required><br>
-                <input id="input2" type="password" placeholder="Password" required><br>
+            <form action="sign_In.php" method="post">
+                <input id="input1" type="email" name="email" id="email" placeholder="Email or phone number" required><br>
+                <input id="input2" type="password" name="pass" id="pass" placeholder="Password" required><br>
                 
                 <input id="check" type="checkbox"> Remember me
                 
-                <button class="btn"><a href="#">Sign In</a></button><br>
+                <button class="btn"><a href="">Sign In</a></button><br>
+            </form>
 
                 <p id="pass"><a href="#">Forgot password?</a></p>
 
                 <p id="up">Don't have account? <a href="sign_up.html">Sign Up now</a></p>
+
+                <p id="captcha">Sign in is protected by Google reCAPTCHA to ensure you're not a bot. <a href="#">Learn more...</a></p>
         </div>
 </body>
 </html>
